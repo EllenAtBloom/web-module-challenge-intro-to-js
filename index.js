@@ -294,7 +294,7 @@ Using the grade function below do the following:
 
 function grade(score){
 if(score >= 90) {
-  'you got an A';
+  return 'you got an A';
 } else if(score < 90 && score >= 80) {
   return 'you got a B'
 } else if(score < 80 && score >= 70) {
