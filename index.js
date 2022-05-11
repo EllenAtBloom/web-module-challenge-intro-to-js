@@ -19,6 +19,8 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 36;
+console.log(votingAge > 18);
 
 
 
@@ -33,7 +35,13 @@ Do the following:
 
    HINT: no function required
 */
+let firstThing = 32;
+let secondThing = 79;
+if(firstThing > secondThing) {
+  firstThing + 6;
+}
 
+console.log(firstThing);
 
 
 
@@ -49,6 +57,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let goodYear = "1999";
+console.log(Number(goodYear));
+
 
 
 
@@ -61,9 +72,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a * b;
 }
+console.log(multiply(6,9));
 
 
 
@@ -76,9 +88,9 @@ Do the following:
  2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
  3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+console.log(dogYears(16));
+function dogYears(par1){
+  return par1 * 7;
 }
 
 
@@ -129,9 +141,31 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(dogWeight, dogAge) {
+  if(dogAge >= 1) {
+    if(dogWeight <= 5) {
+      return(dogWeight * 0.05);
+    } else if(dogWeight > 5 && dogWeight < 11) {
+        return(dogWeight * 0.04);
+    } else if(dogWeight >= 11 && dogWeight <=15) {
+        return(dogWeight * 0.04);
+    } else if(dogWeight > 15) {
+        return(dogWeight * 0.02);
+      }
+  }
+  else if(dogAge < 1) {
+    if(dogAge && dogAge < 4/12) {
+      return(dogWeight * 0.1);
+    }
+    else if(dogAge > 4/12 && dogAge < 7/12) {
+      return(dogWeight * 0.05);
+    }
+    else if(dogAge > 7/12 && dogAge < 1) {
+      return(dogWeight * 0.04);
+    }
+  }
+  }
+console.log(hungryDog(4, 1));
 
 
 
