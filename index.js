@@ -147,10 +147,10 @@ function hungryDog(dogWeight, dogAge) {
   if(dogAge >= 1) {
     if(dogWeight <= 5) {
       return(dogWeight * 0.05);
-    } else if(dogWeight > 5 && dogWeight < 11) {
+    } else if(dogWeight > 5 && dogWeight <= 11) {
         return(dogWeight * 0.04);
-    } else if(dogWeight >= 11 && dogWeight <=15) {
-        return(dogWeight * 0.04);
+    } else if(dogWeight > 11 && dogWeight <=15) {
+        return(dogWeight * 0.03);
     } else if(dogWeight > 15) {
         return(dogWeight * 0.02);
       }
@@ -194,19 +194,19 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 let computer = Math.random();
 if(computer <= 0.34) {
-  computerChoice = 'rock';
+  computer = 'rock';
 }
 else if(computer > 0.34 && computer <= 0.67) {
   computer = 'paper';
 }
-else if(computerChoice > 0.67) {
+else if(computer > 0.67) {
   computer = 'scissors';
 }
 
 function game(user, computer) {
 
   if(user === computer) {
-    return `it's a tie!`;
+    return `it's a tie`;
   } else if(user === 'rock' && computer === 'scissors') {
     return "you win!";
   } else if (user === 'paper' && computer === 'rock') {
@@ -235,7 +235,7 @@ Using the miles function below do the following:
 
 function miles(km){
   /*add your code here*/
-  return km * 0.62;
+  return km * 0.621371;
 }
 
 console.log(miles(4));
@@ -272,7 +272,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
       for(let i = number; i > 0; i--){
-        return'${i} bottles of soda on the wall, ${i} bottles of soda, take one down, pass it around, &{i - 1} bottles of soda on the wall'
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
       }
 }
 
@@ -301,7 +301,7 @@ if(score >= 90) {
   return 'you got a C'
 } else if(score < 70 && score >= 60) {
   return 'you got a D'
-} else if(score > 60) {
+} else if(score < 60) {
   return 'you got an F'
 }
 }
