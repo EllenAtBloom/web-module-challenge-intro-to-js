@@ -19,8 +19,13 @@ Do the following:
 
    HINT: no function required
 */
-const votingAge = 36;
-console.log(votingAge > 18);
+const votingAge = 18;
+if(votingAge >=18) {
+  console.log(true);
+}else{
+  console.log(false);
+}
+
 
 
 
@@ -35,13 +40,12 @@ Do the following:
 
    HINT: no function required
 */
-let firstThing = 32;
-let secondThing = 79;
-if(firstThing > secondThing) {
-  firstThing + 6;
+let dog = 'Ada';
+let behavior = 'bad';
+if(behavior === 'bad') {
+  dog = 'Noa';
 }
-
-console.log(firstThing);
+console.log(dog);
 
 
 
@@ -57,11 +61,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-let goodYear = "1999";
-console.log(Number(goodYear));
-
-
-
+const party = '1999';
+console.log('task 1c: ', Number(party));
 
 /*
 Task 1d - Multiply
@@ -88,11 +89,12 @@ Do the following:
  2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
  3. Return the newly calculated age
 */
-console.log(dogYears(16));
-function dogYears(par1){
-  return par1 * 7;
+
+function dogYears(age){
+  return age * 7;
 }
 
+console.log(dogYears(16));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -222,14 +224,13 @@ function game(user, computer) {
       return("it's a tie!");
     }  
   }
+
   else if(user ==='paper') {
     if(computer === 'scissors') {
       return('you lose!');
-    } 
-    else if(computer === 'rock') {
+    } else if(computer === 'rock') {
       return('you win!');} 
-    }
-    else if(user === computer) {
+    } else if(user === computer) {
     return("it's a tie!");
   }
     
@@ -249,10 +250,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(kilometers){
+function miles(km){
   /*add your code here*/
-  miles = kilometers * 0.621371;
-  return miles;
+  return km * 0.62;
 }
 
 console.log(miles(4));
@@ -267,11 +267,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48; 
 }
 
-
+console.log(feet(160));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -287,8 +287,10 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+      for(let i = number; i > 0; i--){
+        return'${i} bottles of soda on the wall, ${i} bottles of soda, take one down, pass it around, &{i - 1} bottles of soda on the wall'
+      }
 }
 
 
